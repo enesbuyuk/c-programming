@@ -2,21 +2,23 @@
 #include <math.h>
 
 int main(){
-    int number, threeDigitInt, total=0, digit;
+    int number, threeDigitsInt, total=0, digit;
     
     printf("Please enter the three digit integer:\n");
-    scanf("%d", &threeDigitInt);
-    number = threeDigitInt;
-    for (number=threeDigitInt;number > 10;number=number/10){
+    scanf("%d", &threeDigitsInt);
+    number = threeDigitsInt;
+    for (number=threeDigitsInt;number > 10;number=number/10){
         digit = number % 10;
         total = total + pow(digit,3);
 
-        if(number < 10){
-            total = total + pow(number,3);
-        }
+
     }
 
-    if (total == threeDigitInt){
+    if(number < 10){
+        total = total + pow(number,3);
+    }
+    
+    if (total == threeDigitsInt){
         printf("Equal.");
     }else{
         printf("Not equal.");
@@ -24,3 +26,5 @@ int main(){
 
     return 0;
 }
+
+
