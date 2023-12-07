@@ -12,6 +12,7 @@ int main(){
     int oldArray[n],newArray[n];
 
     for(int i=0;i<n;i++){
+        printf("Enter the %d. element: ",i+1);
         if(scanf("%d",&oldArray[i]) == 0){
             printf("You must enter a integer!");
             return 0;
